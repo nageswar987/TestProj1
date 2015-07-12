@@ -1,0 +1,12 @@
+<project name="flipkart" default="package">
+
+ <target name="compilation">
+  <mkdir dir="class"/>
+  <javac srcdir="src" destdir="class"/>
+ </target>
+
+ <target name="package" depends="compilation">
+  <mkdir dir="lib"/>
+  <jar basedir="class" destfile="lib/flipkart.jar"/>
+ </target>
+</project>
